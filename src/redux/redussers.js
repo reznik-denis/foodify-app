@@ -1,5 +1,5 @@
 import { createReducer, combineReducers } from "@reduxjs/toolkit";
-import {favourites, modal} from './actions';
+import {favourites, modal, deleteDish} from './actions';
 import { random } from './operations';
 import {initialState} from './initialState'
 
@@ -10,7 +10,8 @@ const randomReducer = createReducer(initialState, {
 })
 
 const favouritesRedusser = createReducer('', {
-    [favourites]: (state, action) => [action.payload, ...state]
+    [favourites]: (state, action) => [action.payload, ...state],
+    [deleteDish]: (_, action) => action.payload,
 })
 
 const loading = createReducer(false, {

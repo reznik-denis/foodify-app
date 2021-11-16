@@ -45,6 +45,7 @@ export default function Form() {
       }
     dispatch(actions.favourites(data));
     reset();
+    dispatch(actions.modal(false));
   };
 
   const reset = () => {
@@ -76,7 +77,6 @@ export default function Form() {
         <div className={s.button}>
             <Button title="Add custom dish"/>
         </div>
-        
       </form>
     </div>
   );

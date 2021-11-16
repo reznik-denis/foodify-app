@@ -1,4 +1,4 @@
-// import s from 'Components/ButtonCity/buttonCity.module.css'
+import { Button } from 'Components/Button';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -10,6 +10,6 @@ export default function NoFoundPage() {
     }
 
     return <><h2>This page not found. Please back to main page.</h2>
-        <button type='submit' onClick={handleSubmit}>Go to Main</button>
+        <Button title='Go to Main' handleSubmit={handleSubmit}/>
         </>
 }

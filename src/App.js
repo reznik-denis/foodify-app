@@ -11,7 +11,7 @@ import { Form } from 'Components/Form';
 import { operation, selectors } from './redux';
 
 const Main = lazy(() => import('./views/Main.js' /* webpackChunkName: "main-view" */));
-const Favourites = lazy(() => import('./views/Favourites.js' /* webpackChunkName: "weatherForecast-view" */));
+const Favourites = lazy(() => import('./views/Favourites.js' /* webpackChunkName: "favourites-view" */));
 const NoFoundPage = lazy(() => import('./views/NoFoundPage.js' /* webpackChunkName: "noFoundPage-view" */))
 
 function App() {
