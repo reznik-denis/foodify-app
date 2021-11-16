@@ -6,6 +6,11 @@
 
 img[alt='GitHub'] {
   margin-right: 20px;
+  width: 50px;
+}
+
+img[alt='Linkedin'] {
+  width: 50px;
 }
 
 .flex {

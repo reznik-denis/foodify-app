@@ -1,0 +1,22 @@
+.button {
+  width: 100%;
+  display: block;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #c4c4c4;
+  border-radius: 10px;
+  padding: 10px 25px 10px 25px;
+  box-shadow: 5px 5px 8px 4px rgba(34, 60, 80, 0.2);
+  cursor: pointer;
+  margin: 5px;
+
+  transition: transform;
+  transition-timing-function: ease-in;
+  transition-duration: 200ms;
+}
+
+.button:hover,
+.button:focus {
+  transform: scale(1.1, 1.1);
+}

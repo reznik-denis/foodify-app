@@ -1,9 +1,10 @@
 import { createReducer, combineReducers } from "@reduxjs/toolkit";
 import {favourites} from './actions';
-import {random} from './operations';
+import { random } from './operations';
+import {initialState} from './initialState'
 
-const randomReducer = createReducer(null, {
-    [random]: (state, action) => {
+const randomReducer = createReducer(initialState, {
+    [random.fulfilled]: (state, action) => {
         return action.payload ? action.payload : state;
     },
 })

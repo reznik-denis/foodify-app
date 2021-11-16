@@ -1,0 +1,27 @@
+img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.thumb {
+  max-width: 390px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 20px 40px 20px;
+  background-color: #f8f8f8;
+  text-align: left;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.flex {
+  display: flex;
+}
+
+.description {
+  max-height: 150px;
+  overflow: hidden;
+}

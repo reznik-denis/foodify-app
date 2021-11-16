@@ -1,15 +1,15 @@
 import { css } from '@emotion/react';
-import ClipLoader from "react-spinners/ClipLoader";
+import FadeLoader from "react-spinners/FadeLoader";
 
 const override = css`
   display: block;
   margin: 0 auto;
-  border-color: red;
+  color: #c4c4c4;
 `;
 
 function Loader() {
   return (
-    <ClipLoader color={'#ffffff'} loading={true} css={override} size={150} />
+    <FadeLoader color={'#c4c4c4'} loading={true} css={override} height={35} width={10} radius={20} margin={20} />
   );
 }
 

@@ -9,5 +9,8 @@ export function random() {
             }
             toast.error("Random dish not find");
             return Promise.reject(new Error('Random dish not find'))
-        }).then(data => data);
+        }).then(data => {
+            const meals = { ...data.meals[0] };
+            return meals
+        });
 }

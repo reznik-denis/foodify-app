@@ -1,16 +1,25 @@
 import { Route, Routes } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
+import { useDispatch } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
 
 import { Container } from 'Components/Container';
 import { AppBar } from 'Components/AppBar';
 import { Loader } from 'Components/Loader'
+import { operation } from './redux';
 
 const Main = lazy(() => import('./views/Main.js' /* webpackChunkName: "main-view" */));
 const Favourites = lazy(() => import('./views/Favourites.js' /* webpackChunkName: "weatherForecast-view" */));
 const NoFoundPage = lazy(() => import('./views/NoFoundPage.js' /* webpackChunkName: "noFoundPage-view" */))
 
 function App() {
-  return (
+    const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(operation.random())
+  }, [dispatch]);
+  
+  return (<>
     <Container>
       <Routes>
         <Route path="/" element={<AppBar />}>
@@ -29,6 +38,10 @@ function App() {
         </Route>
     </Routes>
     </Container>
+    <ToastContainer
+            position="bottom-right"
+            autoClose={3000}
+          /></>
   );
 }
 
