@@ -1,5 +1,5 @@
 import { createReducer, combineReducers } from "@reduxjs/toolkit";
-import {favourites} from './actions';
+import {favourites, modal} from './actions';
 import { random } from './operations';
 import {initialState} from './initialState'
 
@@ -24,10 +24,15 @@ const error = createReducer(null, {
     [random.pending]: () => null,
 });
 
+const modalRedussser = createReducer(false, {
+    [modal]: (_, action) => action.payload,
+})
+
 
 export default combineReducers({
     random: randomReducer,
     favourites: favouritesRedusser,
+    modal: modalRedussser,
     loading,
     error,
 })

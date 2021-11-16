@@ -1,0 +1,41 @@
+.background {
+  background-color: white;
+  max-width: 540px;
+  padding-bottom: 20px;
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin-left: 20px;
+  margin-right: 20px;
+  align-items: center;
+}
+
+.input {
+  width: 350px;
+  margin-top: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: white;
+  font-family: inherit;
+  font-size: 18px;
+}
+
+@media screen and (max-width: 650px) {
+  .input {
+    max-width: 100%;
+  }
+}
+
+.title {
+  font-size: 22px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.button {
+  margin-top: 40px;
+}

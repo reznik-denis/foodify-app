@@ -23,7 +23,8 @@ export default function Main() {
     const onClickLike = () => {
         favourites && favourites.find(({ id }) => data.id === id)
             ? toast.error("You have already added this dish!") 
-            : dispatch(actions.favourites(data));
+            : (dispatch(actions.favourites(data)));
+        dispatch(operation.random());
     }
     return <div>
         {loading ? <Loader/> : <ItemDish data={data}>
